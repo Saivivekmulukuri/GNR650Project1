@@ -3,4 +3,6 @@ IAB-GZSL/AwA2
 __pycache__
 .vscode
 *.zip
-*logs*
+IAB-GZSL/logs
+IAB-GZSL/vis
+IAB-GZSL/pretrained_models
