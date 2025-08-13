@@ -29,14 +29,14 @@ def get_opt():
     parser.add_argument('--resume', default=False)
     #key parameters
     parser.add_argument('--dataset', default='CUB', help='FLO, CUB')
-    parser.add_argument('--root', default='/raid/ViGiL/Prof.Ajit/SaiVivek/IAB-GZSL/', help='path to project')
-    parser.add_argument('--image_root', default='/raid/ViGiL/Prof.Ajit/SaiVivek/IAB-GZSL', type=str, metavar='PATH',
+    parser.add_argument('--root', default='./', help='path to project')
+    parser.add_argument('--image_root', default='./', type=str, metavar='PATH',
                         help='path to image root')
     parser.add_argument('--device', default='cuda:1', help='cuda:{} for running')
     parser.add_argument('--group_path', default='',
                         # resnet101_cub.pth.tar resnet101-5d3b4d8f.pth
                         help="path to group files")
-    parser.add_argument('--resnet_path', default='/raid/ViGiL/Prof.Ajit/SaiVivek/IAB-GZSL/pretrained_models/resnet101-5d3b4d8f.pth',
+    parser.add_argument('--resnet_path', default='./pretrained_models/resnet101-5d3b4d8f.pth',
                         # resnet101_cub.pth.tar resnet101-5d3b4d8f.pth
                         help="path to pretrain resnet classifier")
     parser.add_argument('--calibrated_stacking', type=float, default=2.0,
@@ -77,7 +77,7 @@ def get_opt():
     parser.add_argument('--alpha7', type=float, default=0.0)
 
     parser.add_argument('--random_grouping',type = bool, default = True)
-    parser.add_argument('--model_path', default='/raid/ViGiL/Prof.Ajit/SaiVivek/IAB-GZSL/pretrained_models/resnet101-5d3b4d8f.pth',help="path to trained model.")
+    parser.add_argument('--model_path', default='./pretrained_models/resnet101-5d3b4d8f.pth',help="path to trained model.")
     parser.add_argument('--vars_test', action='store_true', default=False)
     parser.add_argument('--NAA_test', action='store_true', default=False)
     # opt for finetune ALE
